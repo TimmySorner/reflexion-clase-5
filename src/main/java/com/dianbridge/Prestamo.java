@@ -1,74 +1,68 @@
 package com.dianbridge;
 
 public class Prestamo {
+    private Libro libro;
+    private Usuario usuario;
+    private String fechaPrestamo;
+    private String fechaDevolucion;
 
-// Atributos 
+    // Constructor
+    public Prestamo(Libro libro, Usuario usuario, String fechaPrestamo, String fechaDevolucion) {
+        this.libro = libro;
+        this.usuario = usuario;
+        this.fechaPrestamo = fechaPrestamo;
+        this.fechaDevolucion = fechaDevolucion;
+    }
 
+    // Metodos getter y setter
+    public Libro getLibro() {
+        return libro;
+    }
 
- private Libro libro;
- private Usuario usuario;
- private String fechaPrestamo;
- private String fechaDevolucion;
+    public Usuario getUsuario() {
+        return usuario;
+    }
 
+    public String getFechaPrestamo() {
+        return fechaPrestamo;
+    }
 
-// Constructor 
+    public String getFechaDevolucion() {
+        return fechaDevolucion;
+    }
 
- public Prestamo (String libro, String usuario, String fechaPrestamo, String fechaDevolucion) {
+    public void setLibro(Libro libro) {
+        this.libro = libro;
+    }
 
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 
-    this.Libro = libro;
-    this.usuario = usuario;
-    this.fechaPrestamo = fechaPrestamo;
-    this.fechaDevolucion = fechaDevolucion;
- }
+    public void setFechaPrestamo(String fechaPrestamo) {
+        this.fechaPrestamo = fechaPrestamo;
+    }
 
- // Metodos getter y setter
+    public void setFechaDevolucion(String fechaDevolucion) {
+        this.fechaDevolucion = fechaDevolucion;
+    }
+    
+    
 
- public String getlibro() {
-    return libro;
- }
+    @Override
+    public String toString() {
+        return "Prestamo{" +
+        "libro=" + libro.getTitulo() +
+        ", usuario=" + usuario.getNombre() +
+        ", fechaPrestamo='" + fechaPrestamo + '\'' +
+        ", fechaDevolucionPrevista='" + fechaDevolucion + '\'' +
+        '}';
+    }
 
-public void setlibro(String libro) {
-    this.libro = libro;
-}
+    
 
- public String getusuario() {
-    return usuario;
-}
+    
 
-public void setusuario(String usuario) {
-    this.usuario = usuario;
-}
-
-
-
-public String getfechaPrestamo() {
-    return fechaPrestamo;
-
-}
-
-public void setfechaPrestamo(String fechaPrestamo){
-    this.fechaPrestamo = fechaPrestamo;
-}
-
-
-public String getfechaDevolucion() {
-    return fechaDevolucion;
-}
-
-public void setfechaDevolucion(String fechaDevolucion){
-    this.fechaDevolucion= fechaDevolucion;
-}
-
-// Metodo para calcular dias de retraso  
-
-public void calcularRetraso()   {
- 
-
-
-}
-
-
-
+    
 
 }

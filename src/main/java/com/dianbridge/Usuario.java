@@ -1,5 +1,4 @@
 package com.dianbridge;
-
 import java.util.ArrayList;
 
 public class Usuario {
@@ -34,6 +33,10 @@ public class Usuario {
         return nombre;
     }
 
+    public ArrayList<Prestamo> getPrestamos() {
+        return prestamos;
+    }
+
     // Métodos setter
 
     public void setNombre(String nombre) {
@@ -46,6 +49,10 @@ public class Usuario {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setPrestamos(ArrayList<Prestamo> prestamos) {
+        this.prestamos = prestamos;
     }
 
     // Método para agregar un préstamo a la lista
@@ -63,7 +70,8 @@ public class Usuario {
     public String toString() {
         return "Usuario [id=" + id +
                 ", nombre=" + nombre +
-                ", email=" + email
+                ", email=" + email +
+                ", prestamos=" + prestamos
                 + "]";
     }
 
